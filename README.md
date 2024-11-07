@@ -21,12 +21,12 @@ VapeCops 프로젝트는 공공장소에서 흡연 여부를 실시간으로 감
 ## 설치 및 실행 방법
 
 ### 필수 요구사항
-- **Python 3.x** (라즈베리파이에서 사용한 버전: Python 3.7)
+- **Python 3.8** (라즈베리파이와 Jupyter Notebook 환경에서 Python 3.8을 권장)
+- **가상환경 사용 권장**
 
 ### 1. Jupyter Notebook에서 모델 학습하기
-프로젝트는 Jupyter Notebook 환경에서 학습 코드를 실행하여 모델을 트레이닝합니다. 아래 명령어로 노트북 환경을 설정합니다.
+프로젝트는 Jupyter Notebook 환경에서 학습 코드를 실행하여 모델을 트레이닝합니다. 가상환경을 설정한 후, 아래 명령어로 노트북 환경을 실행하세요.
 ```bash
-pip install -r requirements.txt
 jupyter notebook
 ```
 
@@ -104,4 +104,4 @@ VapeCops/
 
 ---
 
-이제 Python 버전 정보가 README에 포함되어 사용자에게 필요한 환경 정보를 명확하게 전달할 수 있습니다.
+이제 Python 3.8과 가상환경 사용 권장 사항이 포함되어, 프로젝트 환경 설정이 더욱 명확해졌습니다.
