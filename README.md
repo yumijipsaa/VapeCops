@@ -2,7 +2,7 @@
 
 **작성자**: 정원주  
 **최종 업데이트**: 2024년 11월 7일  
-**GitHub**: [VapeCops 프로젝트 저장소](https://github.com/username/vapecops)
+**GitHub**: [VapeCops 프로젝트 저장소](https://github.com/yumjipsaa/VapeCops)
 
 ---
 
@@ -15,7 +15,7 @@ VapeCops 프로젝트는 딥러닝 기반의 실시간 흡연 감지 시스템�
 ## 설치 및 실행 방법
 
 ### 필수 요구사항
-- **Python 3.8** (라즈베리파이와 Jupyter Notebook 환경에서 Python 3.8을 권장)
+- **Python 3.9.18** (라즈베리파이와 Jupyter Notebook 환경에서 Python 3.9.18을 권장)
 - **가상환경 사용 권장**
 
 ### 1. Jupyter Notebook에서 모델 학습하기
@@ -30,11 +30,11 @@ jupyter notebook
 ### 2. 라즈베리파이에 모델 배포하기
 
 #### 1) 가상환경 생성 및 활성화
-라즈베리파이에서 가상환경을 만들어 필요 패키지를 격리하여 관리합니다.
+라즈베리파이에서 **Python 3.9.18** 버전으로 가상환경을 만들어 필요 패키지를 격리하여 관리합니다.
 
 ```bash
-# 가상환경 생성
-python3 -m venv venv
+# Python 3.9.18 버전으로 가상환경 생성
+python3.9 -m venv venv
 
 # 가상환경 활성화
 source venv/bin/activate
