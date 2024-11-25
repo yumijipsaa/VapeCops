@@ -1,14 +1,14 @@
 # VapeCops: 실시간 흡연 감지 시스템 🚭
 
 **작성자**: 정원주  
-**최종 업데이트**: 2024년 11월 7일  
+**최종 업데이트**: 2024년 11월 25일  
 **GitHub**: [VapeCops 프로젝트 저장소](https://github.com/yumjipsaa/VapeCops)
 
 ---
 
 ## 소개
 
-VapeCops 프로젝트는 딥러닝 기반의 실시간 흡연 감지 시스템으로, 공공장소에서의 비흡연 환경을 조성하기 위해 개발되었습니다. 이 노트북에서는 Jupyter Notebook 환경에서 TensorFlow와 OpenCV를 활용하여 MobileNet 모델을 학습시키는 과정을 보여줍니다. 학습된 모델은 TFLite 형식으로 변환되어 Raspberry Pi와 같은 엣지 디바이스에 배포되며, 흡연 행위를 감지하면 경고음을 울리는 이동식 로봇 플랫폼에 탑재되어 실행 됩니다.
+VapeCops 프로젝트는 딥러닝 기반의 실시간 흡연 감지 시스템으로, 공공장소에서의 비흡연 환경을 조성하기 위해 개발되었습니다. 이 노트북에서는 Jupyter Notebook 환경에서 TensorFlow와 OpenCV를 활용하여 MobileNet 모델을 학습시키는 과정을 보여줍니다. 학습된 모델은 h5 또는 saved_model 형식으로 변환되어 Raspberry Pi와 같은 엣지 디바이스에 배포되며, 흡연을 감지하면 경고음을 울리는 이동식 커스텀 로봇에 탑재 됩니다.
 
 ## 설치 및 실행 방법
 
@@ -53,32 +53,7 @@ pip install -r requirements.txt
 트레이닝 완료 후 생성된 모델 파일(.tflite)을 라즈베리파이로 전송합니다. USB, scp 등 방법으로 파일을 복사한 뒤, 프로젝트 디렉토리에 배치합니다.
 
 
-### 3. 데이터셋 준비
-
-사용자가 직접 데이터셋을 준비해야 합니다. 데이터셋은 다음과 같은 구조를 따라야 합니다:
-
-```
-dataset/
-├── train/
-│   ├── smoking/
-│   │   ├── image1.jpg
-│   │   └── image2.jpg
-│   └── notsmoking/
-│       ├── image1.jpg
-│       └── image2.jpg
-├── validation/
-│   ├── smoking/
-│   │   └── image1.jpg
-│   └── notsmoking/
-│       └── image1.jpg
-└── test/
-    ├── smoking/
-    │   └── image1.jpg
-    └── notsmoking/
-        └── image1.jpg
-```
-
-### 4. 프로젝트 실행
+### 3. 프로젝트 실행
 라즈베리파이에서 아래 명령어로 흡연자 감지 시스템을 실행합니다.
 
 ```bash
